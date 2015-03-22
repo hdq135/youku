@@ -1,0 +1,2 @@
+# youku
+用webview打开youku获取视频数据 然后加载js生成html5页面跳过广告直接播放视频
