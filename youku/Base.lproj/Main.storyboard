@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGW-W4-oy3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BEc-l7-kNv"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NGW-W4-oy3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4wu-0P-EXK"/>
+                            <constraint firstAttribute="trailing" secondItem="NGW-W4-oy3" secondAttribute="trailing" id="MmH-hM-Z2z"/>
+                            <constraint firstItem="NGW-W4-oy3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MmT-QH-8Vf"/>
+                            <constraint firstAttribute="bottom" secondItem="NGW-W4-oy3" secondAttribute="bottom" id="rGY-24-vtd"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="NGW-W4-oy3" id="aAI-Nv-7qf"/>
+                        <segue destination="0ds-fd-imM" kind="show" identifier="segue" id="Xg3-2h-kmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="74"/>
+        </scene>
+        <!--Html5 View Controller-->
+        <scene sceneID="vrc-BU-Qhr">
+            <objects>
+                <viewController id="0ds-fd-imM" customClass="html5ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vih-fG-8Kf"/>
+                        <viewControllerLayoutGuide type="bottom" id="etD-KR-Qdg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YBz-T3-11y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-a6-0EA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0ds-fd-imM" id="hGX-KI-It6"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-dM-A5e">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refrsh:" destination="0ds-fd-imM" eventType="touchUpInside" id="1GS-c7-FOr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xrb-a6-0EA" secondAttribute="trailing" id="8M3-Ev-MRX"/>
+                            <constraint firstItem="Xrb-a6-0EA" firstAttribute="leading" secondItem="YBz-T3-11y" secondAttribute="leading" id="UIN-vO-y0h"/>
+                            <constraint firstItem="Xrb-a6-0EA" firstAttribute="top" secondItem="YBz-T3-11y" secondAttribute="top" id="gt3-hn-0zc"/>
+                            <constraint firstAttribute="bottom" secondItem="Xrb-a6-0EA" secondAttribute="bottom" id="ssZ-lX-cnh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refrsh" destination="ddw-dM-A5e" id="Olh-7D-TWD"/>
+                        <outlet property="webView" destination="Xrb-a6-0EA" id="VW4-Jc-sFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qY1-Zc-rtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="74"/>
+        </scene>
+    </scenes>
+</document>
